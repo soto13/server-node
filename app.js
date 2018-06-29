@@ -35,4 +35,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 //////////////// start the server ////////////////
 // app.listen(app.get('port'), () => console.log(`Running app rufian, open in the server "localhost:${app.get('port')}"`));
 export default app;
-/* JOSE SOTO IBARRA -OLLPAY  */
