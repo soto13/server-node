@@ -5,8 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run build && node ./dist/bin/www.js",
     "dev": "nodemon --exec babel-node ./bin/www",
+    "prod": "npm run build && forever start ./dist/bin/www.js",
+    "list": "forever list",
+    "stop": "forever stop",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
   },
   "author": "Jose Soto",
@@ -17,6 +20,7 @@
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "morgan": "^1.9.0",
+    "forever-monitor": "^1.7.1",
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
