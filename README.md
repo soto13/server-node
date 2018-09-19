@@ -1,3 +1,33 @@
+# Run Node in Background
+
+# With forever
+
+- npm install forever -g
+
+- npm run prod
+
+# Stop forever
+
+- npm run list
+
+- npm run stop PID
+
+# Or
+
+- forever stopall
+
+# With nohup
+
+- nohup npm start &
+
+# See process
+
+- ps ax1 | grep node
+
+# Kill process
+ 
+ - kill -9 idprocess
+
 # Servidor de Node
 
 Es un cascaron de un servidor de Node, éste está configurado para utilizar ES6
