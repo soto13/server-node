@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import { renderFile } from 'ejs';
 import express from "express";
 import path from "path";
 import routes from "./routes/index";
@@ -9,8 +10,18 @@ const app = express();
 
 //////////////// settings ////////////////
 
-// app.set('port', process.env.PORT || PORT);
+/* 
+EJS
+
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs'); // para renderizar la vista a extenciones ejs
+app.set('images', path.join(__dirname, 'public'))
+
+ */
+
+// HTML
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', renderFile);
 app.set('view engine', 'ejs'); // para renderizar la vista a extenciones ejs
 app.set('images', path.join(__dirname, 'public'))
 
