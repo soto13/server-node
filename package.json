@@ -5,30 +5,22 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start": "nodemon --exec babel-node ./bin/www",
-=======
     "start": "npm run build && node ./dist/bin/www.js",
->>>>>>> 01a69bd5eaa211f57b945b596e956a850ab824e0
     "dev": "nodemon --exec babel-node ./bin/www",
-    "prod": "npm run build && forever start ./dist/bin/www.js",
+    "prod": "sudo npm run build && sudo forever start ./dist/bin/www.js",
     "list": "forever list",
     "stop": "forever stop",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
   },
-  "author": "Jose Soto",
-  "license": "ISC",
+  "author": "Jose Ezequiel Soto Ibarra",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "morgan": "^1.9.0",
-<<<<<<< HEAD
     "forever-monitor": "^1.7.1"
-=======
-    "forever-monitor": "^1.7.1",
->>>>>>> 01a69bd5eaa211f57b945b596e956a850ab824e0
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
